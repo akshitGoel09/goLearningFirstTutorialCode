@@ -4,14 +4,31 @@ import (
 	"fmt"
 )
 
+const (
+	firstC     = 1
+	secondC    = "second"
+	firstIota  = iota
+	secondIota = iota
+	thirdIota  = iota + 6
+	fourthIota = 2 << iota
+	fifthIota
+)
+
+//Iota resets with constant blocs
+const (
+	newI  = iota
+	new2I = iota
+)
+
 /*
   Comment out the methods on which type you want to test
 */
 func main() {
-	// simplePrint()
-	// primitiveDataTypes()
-	// pointers()
+	simplePrint()
+	primitiveDataTypes()
+	pointers()
 	constants()
+	iotaExample()
 }
 
 func simplePrint() {
@@ -19,6 +36,8 @@ func simplePrint() {
 }
 
 func primitiveDataTypes() {
+	fmt.Println("")
+	fmt.Println("Primitve data types examples")
 	var i int
 	i = 42
 	fmt.Println(i)
@@ -40,6 +59,8 @@ func primitiveDataTypes() {
 }
 
 func pointers() {
+	fmt.Println("")
+	fmt.Println("Pointers Examples")
 	var firstName *string = new(string)
 
 	*firstName = "Akshit"
@@ -59,6 +80,8 @@ func pointers() {
 }
 
 func constants() {
+	fmt.Println("")
+	fmt.Println("Constants Exampes")
 	const pi = 3.1415
 	fmt.Println(pi)
 	// pi = 2.14 Leads to error as it is constant
@@ -80,4 +103,18 @@ func constants() {
 	//Check typecasting is a little different from java
 	fmt.Println(float32(d) + 1.2)
 
+}
+
+func iotaExample() {
+	fmt.Println("")
+	fmt.Println("Iota and constant expressions")
+	fmt.Println(firstC)
+	fmt.Println(secondC)
+	fmt.Println(firstIota)
+	fmt.Println(secondIota)
+	fmt.Println(thirdIota)
+	fmt.Println(fourthIota)
+	fmt.Println(fifthIota)
+	fmt.Println(newI)
+	fmt.Println(new2I)
 }
