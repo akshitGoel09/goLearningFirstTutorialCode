@@ -10,7 +10,8 @@ import (
 func main() {
 	// simplePrint()
 	// primitiveDataTypes()
-	pointers()
+	// pointers()
+	constants()
 }
 
 func simplePrint() {
@@ -55,4 +56,28 @@ func pointers() {
 
 	lastName = "Aggarwal"
 	fmt.Println(ptr, *ptr)
+}
+
+func constants() {
+	const pi = 3.1415
+	fmt.Println(pi)
+	// pi = 2.14 Leads to error as it is constant
+
+	const c = 3
+
+	fmt.Println(c + 3)
+
+	//A bunch of code
+
+	fmt.Println(3 + 1.2)
+
+	//const with specific type
+	const d int = 3
+
+	fmt.Println(d + 3)
+
+	//We need to type cast it to fload32 and then add 1.2 now earlier we could do it without it
+	//Check typecasting is a little different from java
+	fmt.Println(float32(d) + 1.2)
+
 }
