@@ -5,7 +5,27 @@ import "fmt"
 func main() {
 	// array()
 	// slice()
-	mapExample()
+	// mapExample()
+	structExample()
+}
+
+func structExample() {
+
+	type user struct {
+		ID        int
+		FirstName string
+		LastName  string
+	}
+
+	var u user
+	u.ID = 1
+	u.FirstName = "Akshit"
+	u.LastName = "Goel"
+	fmt.Println(u)
+
+	u2 := user{ID: 2, FirstName: "Akshit", LastName: "Goel"}
+
+	fmt.Println(u2)
 }
 
 func mapExample() {
